@@ -115,6 +115,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
 data "cloudinit_config" "config" {
   gzip          = false
   base64_encode = true
+  
 
   part {
     filename     = "init.sh"

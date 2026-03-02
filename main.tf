@@ -114,7 +114,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
 
 data "cloudinit_config" "config" {
   gzip          = false
-  base64_encode = false
+  base64_encode = true
 
   part {
     filename     = "init.sh"
@@ -137,7 +137,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("id_rsa.pub")
   }
 
   os_disk {

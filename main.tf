@@ -49,3 +49,10 @@ resource "azurerm_public_ip" "pip" {
   allocation_method   = "Static"
   sku                 = "Standard"
 }
+
+resource "azurerm_virtual_network" "vnet" {
+  name                = "${var.labelPrefix}-A05-VNET"
+  location            = var.region
+  resource_group_name = azurerm_resource_group.rg.name
+  address_space       = ["10.0.0.0/16"]
+}

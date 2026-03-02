@@ -3,6 +3,9 @@
 Screenshot of successful `terraform init`:
 
 ![Terraform Init](images/screenshot-init.png)
+
+Screenshot of successful `terraform apply`:
+
 ![Terraform Apply](images/screenshot-apply.png)
 
 ---

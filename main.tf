@@ -24,3 +24,15 @@ provider "azurerm" {
 provider "cloudinit" {
   # Configuration options
 }
+
+variable "labelPrefix" {
+  type = string
+}
+
+variable "region" {
+  default = "westus"
+}
+
+variable "admin_username" {
+  default = "azureadmin"
+}
